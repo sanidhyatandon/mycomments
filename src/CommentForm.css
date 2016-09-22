@@ -1,0 +1,9 @@
+.CommentForm {
+	align-self: flex-end;
+	margin-bottom: 0;
+}
+
+.CommentForm textarea {
+	resize: none;
+	width: 470px;
+}

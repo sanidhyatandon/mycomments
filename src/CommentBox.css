@@ -1,0 +1,7 @@
+.CommentBox {
+  width: 480px;
+  height: 480px;
+  background-color: #EEE;
+  display: flex;
+  flex-direction: column;
+}
