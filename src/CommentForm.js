@@ -9,6 +9,7 @@ class CommentForm extends Component {
 			input: ""
 		}
 		this.handleChange = this.handleChange.bind(this)
+		this.submitComment = this.submitComment.bind(this)
 		}
 
 	handleChange(e)
@@ -29,7 +30,7 @@ class CommentForm extends Component {
 			<div className="CommentForm">
 				<textarea
 					rows="5"
-					onChange ={this.handleChange}
+					onChange={this.handleChange}
 					placeholder="Write a comment..."
 				/>
 				<button onClick={this.submitComment}>Submit</button>
