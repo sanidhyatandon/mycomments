@@ -3,36 +3,31 @@ import React, { Component } from 'react';
 import './CommentBox.css';
 import CommentList from './CommentList'
 import CommentForm from './CommentForm'
+import {comments} from './data'
 
 class CommentBox extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			input: "comments"
+			comments:comments
 		}
-	
+		this.addComment = this.addComment.bind(this)
 	}
-	handleComments()
-	{
-		
+	addComment(comment) {
+		const updatedComments = this.state.comments.concat(comment)
 		this.setState({
-			input: updatedComments
-
+			comments: updatedComments
 		})
 	}
 
-  render() {
-  	addComment(comment) {
-  		const updatedComments = this.comments.concat(comment)
-  	}
-    return (
-      <div className="CommentBox">
-          This is CommentBox
-          <CommentList comments={[]}/>
-          <CommentForm addComment(comments)/>
-      </div>
-    )
-  }
+	
+	render() {
+		return (
+			<div className="CommentBox" >
+			<CommentList comments={this.state.comments}/>
+			<CommentForm addComment={this.addComment} />
+			</div>
+		)
+	}
 }
-
-export default CommentBox
+export default CommentBox;

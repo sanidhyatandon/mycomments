@@ -4,16 +4,13 @@ import './Comment.css';
 
 
 class Comment extends Component {
-  render() {
-    return (
-      <div className="Comment">
-      
-          {this.props.comment}
-          
-      </div>
-    )
-  }
+	render() {
+		return (
+			<div className="Comment">
+				{this.props.comment}
+			</div>
+			)
+	}
 }
 
-export default Comment
-
+export default Comment;

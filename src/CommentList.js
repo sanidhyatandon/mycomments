@@ -5,15 +5,14 @@ import Comment from './Comment'
 
 
 class CommentList extends Component {
-  render() {
-  const renderedComments = this.props.comments.map((comment, i) => <Comment key={i} comment={comment} />)
+	render() {
+		const renderedComments = this.props.comments.map((c,i) => <Comment key={i} comment={c}/>)
 		return (
-      		<div className="CommentList">
-      		{renderedComments}
-          
-      </div>
-    )
-  }
+			<div className="CommentList">
+				{renderedComments}			
+			</div>
+		)
+	}
 }
 
 export default CommentList

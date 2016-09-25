@@ -21,14 +21,15 @@ class CommentForm extends Component {
 		})
 	}
 
-	submitComment()
-	{
+	submitComment() {
 		this.props.addComment(this.state.input)
+		this.refs.input.value = ''
 	}
 	render() {
 		return (
 			<div className="CommentForm">
 				<textarea
+					ref="input"
 					rows="5"
 					onChange={this.handleChange}
 					placeholder="Write a comment..."
